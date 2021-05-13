@@ -1,5 +1,7 @@
 # Python Easy RSA
 
+[![Upload Python Package](https://github.com/iamoracle/python-easy-rsa/actions/workflows/python-publish.yml/badge.svg)](https://github.com/iamoracle/python-easy-rsa/actions/workflows/python-publish.yml)
+
 Python Easy RSA is a wrapper that allows decryption, encryption, signing, and verifying signature simpler. You can load your keys from a file or from a string. It is easy to use, fast and free!
 
 ## Generating Public and Private Key 
