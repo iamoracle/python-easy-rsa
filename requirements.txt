@@ -1,1 +1,2 @@
 pycryptodome==3.10.1
+pathlib==1.0.1 
