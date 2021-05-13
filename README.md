@@ -1,6 +1,8 @@
-# python-easy-rsa
+# Python Easy RSA
 
-# Generating a Public Key and Private Key 
+Python Easy RSA is a wrapper that allows decryption, encryption, signing, and verifying signature simpler. You can load your keys from a file or from a string. It is easy to use, fast and free!
+
+## Generating Public and Private Key 
 
 ```python
 
@@ -15,13 +17,14 @@ encryption = Encryption(path, name=('public_key.pem', 'private1.pem'))
 encryption.generate_keys()
 ```
 
-## Loading Existing Private Key and Public Key
+## Loading Existing Private and Public Key
 
 
 ```python
 
-# the directory where the keys are stored
-# in this case we are using the current file 
+# the directory where the keys are to be stored
+# in this case we are using the current file directory
+path = Path(__file__).absolute().parent
 
 # initialize the encrypter
 encryption = Encryption(path, name=('public_key.pem', 'private1.pem'))
@@ -37,6 +40,10 @@ encryption.load_keys()
 ## Encrypting a message
 
 ```python
+# the directory where the keys are to be stored
+# in this case we are using the current file directory
+path = Path(__file__).absolute().parent
+
 # initialize the encrypter
 encryption = Encryption(path, name=('public_key.pem', 'private1.pem'))
 
@@ -54,7 +61,7 @@ decrypted = encryption.decrypt(encrypted)
 ```
 
 
-## Encrypt with a custom key from a custom
+## Encrypt with a custom key from a custom file
 
 ```python
 # one time encryption
@@ -87,7 +94,7 @@ decrypted = encryption.decrypt('hello world', file_content)
 
 ## Sign and Verify Message
 
-``python
+```python
 # loads key from file
 encryption = Encryption(path, name=('public_key.pem', 'private1.pem'))
 
