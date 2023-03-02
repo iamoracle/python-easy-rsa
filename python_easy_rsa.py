@@ -1,6 +1,5 @@
 from pathlib import Path
-
-from Crypto import Random
+from typing import Tuple
 from Crypto.Cipher import PKCS1_OAEP
 from Crypto.Signature import PKCS1_v1_5
 from Crypto.Hash import SHA256
@@ -12,7 +11,7 @@ class Encryption:
 
     private_key = None
 
-    def __init__(self, path: Path = None, name: tuple[str, str] = ('public.pem', 'private.pem'), key_length: int = 4096):
+    def __init__(self, path: Path = None, name: Tuple[str, str] = ('public.pem', 'private.pem'), key_length: int = 4096):
         """
         RSA wrapper to generate encryption keys, sign a message, decrypt and encrypt messages\n
         args:\n
@@ -94,7 +93,7 @@ class Encryption:
         self.__file_save_helper(file_path, key)
 
 
-    def save_keys(self, path: Path = None, name: tuple[str, str] = ('public.pem', 'private.pem')):
+    def save_keys(self, path: Path = None, name: Tuple[str, str] = ('public.pem', 'private.pem')):
 
         public_name = name[0] if name else self.public_name
 
@@ -104,7 +103,7 @@ class Encryption:
 
         self.save_key(self.private_key, path=path, name=private_name)
 
-    def encrypt(self, message: str, public_key: str) -> str:
+    def encrypt(self, message: str, public_key: str = None) -> str:
 
         public_key = public_key if public_key else self.public_key
 
@@ -116,7 +115,7 @@ class Encryption:
 
         return encrypted_message.hex()
 
-    def decrypt(self, message: str, private_key: str) -> str:
+    def decrypt(self, message: str, private_key: str = None) -> str:
 
         private_key = private_key if private_key else self.private_key
 
