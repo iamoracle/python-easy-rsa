@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
   name = 'python_easy_rsa',         # How you named your package folder (MyLib)
-  version = '1.0.1',      # Start with a small number and increase it with every change you make
+  version = '1.0.2',      # Start with a small number and increase it with every change you make
   license='MIT',
   py_modules=["python_easy_rsa"],             # Name of the python package       # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = "Python Easy RSA is a wrapper that allows decryption, encryption, signing, and verifying signature simpler. You can load your keys from a file or from a string. It is easy to use, fast and free!",
