@@ -103,7 +103,7 @@ class Encryption:
 
         self.save_key(self.private_key, path=path, name=private_name)
 
-    def encrypt(self, message: str, public_key: str) -> str:
+    def encrypt(self, message: str, public_key: str = None) -> str:
 
         public_key = public_key if public_key else self.public_key
 
@@ -115,7 +115,7 @@ class Encryption:
 
         return encrypted_message.hex()
 
-    def decrypt(self, message: str, private_key: str) -> str:
+    def decrypt(self, message: str, private_key: str = None) -> str:
 
         private_key = private_key if private_key else self.private_key
 
