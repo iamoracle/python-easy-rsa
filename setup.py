@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
   name = 'python_easy_rsa',         # How you named your package folder (MyLib)
-  version = '1.0.1',      # Start with a small number and increase it with every change you make
+  version = '1.0.2',      # Start with a small number and increase it with every change you make
   license='MIT',
   py_modules=["python_easy_rsa"],             # Name of the python package       # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = "Python Easy RSA is a wrapper that allows decryption, encryption, signing, and verifying signature simpler. You can load your keys from a file or from a string. It is easy to use, fast and free!",
@@ -16,7 +16,7 @@ setup(
   long_description=long_description,      # Long description read from the the readme file
   long_description_content_type="text/markdown",
   url = 'https://github.com/iamoracle/python-easy-rsa',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/iamoracle/python-easy-rsa/archive/refs/tags/v1.0.1.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/iamoracle/python-easy-rsa/archive/refs/tags/v1.0.2.tar.gz',    # I explain this later on
   keywords = ['Python', 'RSA', 'Easy', 'generate public key', 'generate private key', 'encrypt', 'decrypt', 'using python'],   # Keywords that define your package best
   install_requires=['pathlib', 'pycryptodome'],
   classifiers=[
