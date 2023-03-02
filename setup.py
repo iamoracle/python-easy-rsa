@@ -16,7 +16,7 @@ setup(
   long_description=long_description,      # Long description read from the the readme file
   long_description_content_type="text/markdown",
   url = 'https://github.com/iamoracle/python-easy-rsa',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/iamoracle/python-easy-rsa/archive/refs/tags/v1.0.1.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/iamoracle/python-easy-rsa/archive/refs/tags/v1.0.2.tar.gz',    # I explain this later on
   keywords = ['Python', 'RSA', 'Easy', 'generate public key', 'generate private key', 'encrypt', 'decrypt', 'using python'],   # Keywords that define your package best
   install_requires=['pathlib', 'pycryptodome'],
   classifiers=[
